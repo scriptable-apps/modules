@@ -47,7 +47,7 @@ if (!fm.isDirectory(baseDir)) {
     fm.createDirectory(baseDir)
 }
 
-let request = new Request('https://julio-kim.github.io/scriptable/modules/moduler/index.js')
+let request = new Request('https://scriptable-apps.github.io/modules/moduler/index.js')
 let moduleFile = await request.loadString()
 fm.writeString(`${baseDir}/index.js`, moduleFile)
 ```
@@ -137,4 +137,4 @@ Scriptable App 에서 사용가능한 유용한 **3rd 라이브러리**들을 �
 
 Module을 사용하시면서 **버그로 인한 불편한 점**이나, **개선사항이 필요하신 경우** 아래의 이슈 링크에서 진행 부탁드립니다.
 
-* [Scriptable modules issues](https://github.com/julio-kim/scriptable/issues)
+* [Scriptable modules issues](https://github.com/scriptable-apps/issues)
