@@ -144,8 +144,8 @@ console.log(lodash.capitalize('julio'))
 
 #### [Lodash의 자세한 가이드]
 
-* [Homepage](https://lodash.com)
-* [Documentation](https://lodash.com/docs/4.17.15)
+* [Homepage (https://lodash.com)](https://lodash.com)
+* [Documentation (https://lodash.com/docs/4.17.15)](https://lodash.com/docs/4.17.15)
 
 ### IV-2. Moment.js
 
@@ -164,9 +164,9 @@ console.log(moment().format('YYYY/MM/DD HH:mm:ss'))
 
 #### [Moment.js의 자세한 가이드]
 
-* [Homepage](https://momentjs.com)
-* [Documentation](https://momentjs.com/docs/)
-* [Guides](https://momentjs.com/guides/)
+* [Homepage (https://momentjs.com)](https://momentjs.com)
+* [Documentation (https://momentjs.com/docs/)](https://momentjs.com/docs/)
+* [Guides (https://momentjs.com/guides/)](https://momentjs.com/guides/)
 
 
 ## V. Feedback
