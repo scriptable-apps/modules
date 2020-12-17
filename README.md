@@ -103,6 +103,8 @@ list().map(ver => ver.name).forEach(ver => uninstall(ver))
 
 ### II-1. CovidStat Widget
 
+<img width="461" alt="covid-stat-preview" src="https://user-images.githubusercontent.com/5626425/102501997-6ad2d580-40c1-11eb-9f1c-ee0680dcae70.png">
+
 [Go to Detail](/modules/covid)
 
 | abc | defghi |
