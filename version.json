@@ -51,7 +51,7 @@
         ]
     }, {
         "name": "lodash",
-        "version": "1.8.3",
+        "version": "4.17.15",
         "description": "✽ Update 3rd module",
         "dependencies": []
     }, {

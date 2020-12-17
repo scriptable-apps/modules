@@ -129,7 +129,45 @@ Scriptable App 에서 사용가능한 유용한 **3rd 라이브러리**들을 �
 
 ### IV-1. Lodash
 
+Lodash는 Javascript Utility Library로 Array, Collection, Date, Number, String, Object등을 손쉽게 다룰 수 있는 다양한 기능을 제공합니다.
+
+#### [Lodash 설치]
+
+```javascript
+const { install } = importModule('/modules/moduler')
+
+const lodash = await install('lodash')
+// 전달받은 문자의 첫번째 글자를 대문자로 전환하여 반환: Julio
+console.log(lodash.capitalize('julio'))
+...
+```
+
+#### Lodash의 자세한 가이드
+
+* [Homepage](https://lodash.com)
+* [Documentation](https://lodash.com/docs/4.17.15)
+
 ### IV-2. Moment.js
+
+Moment.js는 Date를 직관적이고 효율적으로 다룰 수 있는 다양한 기능을 제공합니다.
+
+#### [Moment.js 설치]
+
+```javascript
+const { install } = importModule('/modules/moduler')
+
+const moment = await install('moment')
+// 현재 날짜를 전달받은 Date Format에 맞추어 반환: 2020/12/17 11:00:00
+console.log(moment().format('YYYY/MM/DD HH:mm:ss'))
+...
+```
+
+#### Moment.js의 자세한 가이드
+
+* [Homepage](https://momentjs.com)
+* [Documentation](https://momentjs.com/docs/)
+* [Guides](https://momentjs.com/guides/)
+
 
 ## V. Feedback
 
