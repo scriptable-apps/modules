@@ -142,7 +142,7 @@ console.log(lodash.capitalize('julio'))
 ...
 ```
 
-#### Lodash의 자세한 가이드
+#### [Lodash의 자세한 가이드]
 
 * [Homepage](https://lodash.com)
 * [Documentation](https://lodash.com/docs/4.17.15)
@@ -162,7 +162,7 @@ console.log(moment().format('YYYY/MM/DD HH:mm:ss'))
 ...
 ```
 
-#### Moment.js의 자세한 가이드
+#### [Moment.js의 자세한 가이드]
 
 * [Homepage](https://momentjs.com)
 * [Documentation](https://momentjs.com/docs/)
