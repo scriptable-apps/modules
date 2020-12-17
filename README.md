@@ -103,7 +103,7 @@ list().map(ver => ver.name).forEach(ver => uninstall(ver))
 
 ### II-1. CovidStat Widget
 
-[Go to Detail](/scriptable/modules/covid)
+[Go to Detail](/modules/covid)
 
 | abc | defghi |
 :-: | :-----------
