@@ -19,7 +19,7 @@ const checkTargetModules = (versions, baseModuleName) => {
 }
 
 const getRemoteVersions = async () => {
-    let request = new Request(`https://julio-kim.github.io/scriptable/version.json`)
+    let request = new Request(`https://scriptable-apps.github.io/modules/version.json`)
     return await request.loadJSON()
 }
 
@@ -96,7 +96,7 @@ class Moduler {
         console.log(`call writeModule ${remoteModule.name}`)
         const { fm, baseDir } = getModuleBaseInfos()
     
-        let request = new Request(`https://julio-kim.github.io/scriptable/modules/${remoteModule.name}/index.js`)
+        let request = new Request(`https://scriptable-apps.github.io/modules/${remoteModule.name}/index.js`)
         let moduleFile = await request.loadString()
         fm.writeString(`${baseDir}/${remoteModule.name}/index.js`, moduleFile)
     
@@ -122,7 +122,7 @@ class Moduler {
             noti.title = `${remoteModule.name} (${remoteModule.version}) 모듈이 업데이트 되었습니다.`
             noti.body = remoteModule.description
             noti.sound = 'piano_success'
-            noti.openURL = 'https://julio-kim.github.io/scriptable'
+            noti.openURL = 'https://scriptable-apps.github.io/modules'
             noti.schedule()    
         }
     }
