@@ -14,7 +14,7 @@
 
 ## II. 시작하기
 
-## III. Options
+## III. API
 
 ### i) 공통 옵션
 
