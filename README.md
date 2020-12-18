@@ -38,7 +38,8 @@ Moduler는 Scriptable Modules 프로젝트에서 개발된 모듈들을 **자동
 
 > 아래의 코드를 Scriptable App에 복사하여 실행해 주세요.
 
-```javascriptlet fm = FileManager.iCloud()
+```javascript
+let fm = FileManager.iCloud()
 let dir = fm.documentsDirectory()
 const baseDirs = [`${dir}/modules`, `${dir}/modules/moduler`]
 
