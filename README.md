@@ -38,18 +38,19 @@ Moduler는 Scriptable Modules 프로젝트에서 개발된 모듈들을 **자동
 
 > 아래의 코드를 Scriptable App에 복사하여 실행해 주세요.
 
-```javascript
-let fm = FileManager.iCloud()
+```javascriptlet fm = FileManager.iCloud()
 let dir = fm.documentsDirectory()
-const baseDir = `${dir}/modules/moduler`
+const baseDirs = [`${dir}/modules`, `${dir}/modules/moduler`]
 
-if (!fm.isDirectory(baseDir)) {
-    fm.createDirectory(baseDir)
-}
+baseDirs.forEach(dir => {
+    if (!fm.isDirectory(dir)) {
+        fm.createDirectory(dir)    
+    }
+})
 
 let request = new Request('https://scriptable-apps.github.io/modules/moduler/index.js')
 let moduleFile = await request.loadString()
-fm.writeString(`${baseDir}/index.js`, moduleFile)
+fm.writeString(`${baseDirs[1]}/index.js`, moduleFile)
 ```
 
 > 파일 앱에서 `iCloud Drive > Scriptable` 위치로 이동해 보시면, modules 폴더가 생성되어 있고 moduler가 정상적으로 설치된 것을 확인 할 수 있습니다.
@@ -133,7 +134,7 @@ Scriptable App 에서 사용가능한 유용한 **3rd 라이브러리**들을 �
 
 Lodash는 Javascript Utility Library로 Array, Collection, Date, Number, String, Object등을 손쉽게 다룰 수 있는 다양한 기능을 제공합니다.
 
-#### [Lodash 설치]
+#### i) Lodash 설치
 
 ```javascript
 const { install } = importModule('/modules/moduler')
@@ -144,7 +145,7 @@ console.log(lodash.capitalize('julio'))
 ...
 ```
 
-#### [Lodash의 자세한 가이드]
+#### ii) Lodash의 자세한 가이드
 
 * [Homepage (https://lodash.com)](https://lodash.com)
 * [Documentation (https://lodash.com/docs/4.17.15)](https://lodash.com/docs/4.17.15)
@@ -153,7 +154,7 @@ console.log(lodash.capitalize('julio'))
 
 Moment.js는 Date를 직관적이고 효율적으로 다룰 수 있는 다양한 기능을 제공합니다.
 
-#### [Moment.js 설치]
+#### i) Moment.js 설치
 
 ```javascript
 const { install } = importModule('/modules/moduler')
@@ -164,7 +165,7 @@ console.log(moment().format('YYYY/MM/DD HH:mm:ss'))
 ...
 ```
 
-#### [Moment.js의 자세한 가이드]
+#### ii) Moment.js의 자세한 가이드
 
 * [Homepage (https://momentjs.com)](https://momentjs.com)
 * [Documentation (https://momentjs.com/docs/)](https://momentjs.com/docs/)
