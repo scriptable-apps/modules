@@ -72,6 +72,8 @@ hello('julio')
 
 위의 코드가 정상적으로 실행이 되었다면, **hello** 모듈을 포함한 **종속모듈이 같이 설치**되고 아래와 같이 **Notification이 출력**됩니다.
 
+<img width="450" alt="hello-module" src="https://user-images.githubusercontent.com/5626425/102562109-b31de200-4119-11eb-9d69-8a59eb15b311.jpeg">
+
 ### I-3. Moduler를 이용한 재사용 Module의 설치
 
 Scriptable Modules 프로젝트에서 개발된 모듈은 Moduler의 **install**을 통해 설치할 수 있습니다.
