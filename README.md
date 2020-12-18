@@ -146,15 +146,15 @@ Widget에 변경을 전달할 수 있는 일부 세부사항들은 **options를 
 
 예를 들어, CovidStat Widget에서 다음의 세부사항의 변경을 하려면,
 * Widget 갱신 시간을 기존 1분으로 증가 (default 30초)
-* 주간 확진자 현황 그래프를 표기 (default 표기안함)
+* 주간 확진자 현황 그래프를 Widget 배경으로 표기 (default 표기안함)
 
 ```javascript
 const { install } = importModule('/modules/moduler')
 const { CovidStat } = await install('covid')
 
 let covidStat = new CovidStat({
-    weeklyChart: true,
-    refreshAfterSeconds: 60
+    weeklyChart: true, // 주간 확진자 현황 그래프 표기
+    refreshAfterSeconds: 60 // Widget 갱신시간 60초
 })
 await covidStat.present()
 ```
