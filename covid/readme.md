@@ -8,7 +8,7 @@
 * III. API
 * IV. 삭제하기
 * V. 버전 히스토리
-* VI. 종속 모듈
+* VI. 종속 모듈 R
 
 ## I. CovidStat / CovidStatLive 소개
 
@@ -27,12 +27,12 @@
 | 버전 | 변경내용 | 배포일자 |
 :-: | :---- | :-:
 1.1.0 | 모듈 기반 구조로 변경 (Moduler)<br/>주간 확진자 현황 그래프 반영 | 2020/12/18 
-1.0.0 | 초기 버전 배포 | 2020/11/23 
+1.0.0 | 초기 버전 배포 | 2020/11/23 '
 
 ## VI. 종속 모듈
 
 > CovidStat / CovidStatLive Widget의 종속 모듈 관계는 다음과 같습니다.
 
-* covid
-  * covidbase
-  * simplechart
+* [covid](https://github.com/scriptable-apps/modules/blob/main/covid/index.js)
+  * [covidbase](https://github.com/scriptable-apps/modules/blob/main/covidbase/index.js)
+  * [simplechart](https://github.com/scriptable-apps/modules/blob/main/simplechart/index.js)
