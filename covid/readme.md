@@ -68,15 +68,73 @@ let covidStat = new CovidStat({
 :-: | :---- | :-: | :---- | :-:
 `async` present | | | CovidStat Widget을 출력 | 1.1.0
 
-```javascript
+> 생성된 Widget을 출력하기 위해서는 아래의 메서드를 호출합니다. (비동기 메서드 이므로 await로 호출합니다)
 
+```javascript
+let covidStat = new CovidStat({
+    ...
+})
+await covidStat.present()
 ```
 
 ### ii) CovidStatLive Class
 
-> CovidStat(전일 확진자 기준) Widget 클래스의 API를 살펴봅니다.
+> CovidStatLive(실시간 확진자 현황) Widget 클래스의 API를 살펴봅니다.
+
+#### Constructor Options
+
+| 옵션 | 타입 | 기본값 | 설명 | 버전 |
+:-: | :-: | :-: | :---- | :-:
+refreshAfterSeconds | Int | 30 | Widget의 리프레시 시간을 결정 (초) | 1.1.0
+titleSize | Int | 17(iPhone) 또는 20(iPad) | 타이틀 글자의 사이즈를 결정 | 1.1.0
+countSize | Int | ... | 확진자수 글자의 사이즈를 결정 | 1.1.0
+dateSize | Int | 11(iPhone) 또는 14(iPad) | 날짜 글자의 사이즈를 결정 | 1.1.0
+
+> 옵션의 사용은 아래의 코드를 참조 바랍니다.
+
+```javascript
+let covidStatLive = new CovidStatLive({     
+    titleSize: 17,
+    countSize: 45,
+    dateSize: 11,
+    refreshAfterSecond: 60,
+})
+```
+
+> iPhone/iPad별 사이즈를 설정하고 싶을 경우, 아래의 코드를 참조 바랍니다.
+
+```javascript
+let covidStatLive = new CovidStatLive({     
+    titleSize: Device.iPhone() ? 17 : 20,
+    countSize: Device.iPhone() ? 45 : 55,
+    dateSize: Device.iPhone() ? 11 : 14,
+})
+```
+
+#### Methods
+
+| 메서드 | 파라메터 | 반환값 | 설명 | 버전 |
+:-: | :---- | :-: | :---- | :-:
+`async` present | | | CovidStatLive Widget을 출력 | 1.1.0
+
+> 생성된 Widget을 출력하기 위해서는 아래의 메서드를 호출합니다. (비동기 메서드 이므로 await로 호출합니다)
+
+```javascript
+let covidStatLive = new CovidStatLive({
+    ...
+})
+await covidStatLive.present()
+```
 
 ## IV. 삭제하기
+
+CovidStat 모듈들 삭제하고 싶을 때에는 다음의 코드를 참조해주세요.
+
+```javascript
+const { uninstall } = importModule('/modules/moduler')
+
+uninstall('covid')
+```
 
 ## V. 버전 히스토리
 
