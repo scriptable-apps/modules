@@ -116,6 +116,12 @@ list().map(ver => ver.name).forEach(ver => uninstall(ver))
 
 #### i) 시작하기
 
+Moduler를 통한 CovidStat Widget의 설치는 매우 간단합니다.
+
+> 아래의 코드를 복사해서 Scriptable App에서 실행해 주세요.
+
+##### CovidStat Widget 설치 및 실행하기
+
 ```javascript
 const { install } = importModule('/modules/moduler')
 const { CovidStat } = await install('covid')
@@ -123,6 +129,18 @@ const { CovidStat } = await install('covid')
 let covidStat = new CovidStat()
 await covidStat.present()
 ```
+
+##### CovidStatLive Widget 설치 및 실행하기
+
+```javascript
+const { install } = importModule('/modules/moduler')
+const { CovidStatLive } = await install('covid')
+
+let covidStatLive = new CovidStatLive()
+await covidStatLive.present()
+```
+
+#### ii) 세부 옵션 사용하기
 
 [Go to Detail](/modules/covid)
 
