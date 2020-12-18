@@ -130,6 +130,8 @@ Scriptable App 에서 사용 할 수 있는 직접 제작한 **재사용 컴포�
 
 > **JSON 기반의 데이터 스토어**를 Local에 구성하고 사용할 수 있도록 제공합니다. **저장유형(기간)**에 따라 **Temporary** / **Cache** / **Documents** 형태의 저장이 가능하고, **직관적인 API를 제공**할 예정입니다.
 >
+> 활용 예시라면, [Artvee 위젯](#ii-2-artvee-widget)에서는 Artwork을 매번 로딩하게 되면 성능문제가 있어서, 초기 로딩한 Artwork들을 Store에 저장하여 재사용하도록 구현했습니다.
+>
 > API가 확정되는 대로 공개 해보겠습니다~:)
 
 ### III-2. SimpleChart
