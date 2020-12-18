@@ -36,8 +36,8 @@ refreshAfterSeconds | Int | 30 | Widget의 리프레시 시간을 결정 (초) |
 titleSize | Int | 17(iPhone) 또는 20(iPad) | 타이틀 글자의 사이즈를 결정 | 1.1.0
 countSize | Int | ... | 확진자수 글자의 사이즈를 결정 | 1.1.0
 dateSize | Int | 11(iPhone) 또는 14(iPad) | 날짜 글자의 사이즈를 결정 | 1.1.0
-weeklyChart | Boolean | false | Widget의 리프레시 시간을 결정 (초) | 1.1.0
-fillOpaque | Float | .7 | Widget의 리프레시 시간을 결정 (초) | 1.1.0
+weeklyChart | Boolean | false | 지난 7일간의 확진자 현황을 그래프로 표기 | 1.1.0
+fillOpaque | Float | .7 | 그래프의 불투명도를 조절 (0 ~ 1) | 1.1.0
 
 > 옵션의 사용은 아래의 코드를 참조 바랍니다.
 
