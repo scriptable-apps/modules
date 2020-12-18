@@ -116,7 +116,7 @@ list().map(ver => ver.name).forEach(ver => uninstall(ver))
 
 #### i) 시작하기
 
-Moduler를 통한 CovidStat Widget의 설치는 매우 간단합니다.
+Moduler를 통한 CovidStat Widget의 설치는 매우 간단합니다. (아래의 코드를 실행하기 전에 반드시 [Moduler가 설치](#i-1-moduler-설치)되어 있어야 합니다.)
 
 > 아래의 코드를 복사해서 Scriptable App에서 실행해 주세요.
 
@@ -142,19 +142,26 @@ await covidStatLive.present()
 
 #### ii) 세부 옵션 사용하기
 
-[Go to Detail](/modules/covid)
+Widget에 변경을 전달할 수 있는 일부 세부사항들은 **options를 전달**하여 표기할 수 있습니다.
 
-| abc | defghi |
-:-: | :-----------
-bar | baz
+예를 들어, CovidStat Widget에서 다음의 세부사항의 변경을 하려면,
+* Widget 갱신 시간을 기존 30초에서 1분으로 증가
+* 주간 확진자 현황 그래프를 표기 (default 표기안함)
 
-* overview
-  * overview
-  * preview
-* getting start
-* api
-* uninstall
-* version history
+```javascript
+const { install } = importModule('/modules/moduler')
+const { CovidStat } = await install('covid')
+
+let covidStat = new CovidStat({
+    weeklyChart: true,
+    refreshAfterSeconds: 60
+})
+await covidStat.present()
+```
+
+그 밖의 **자세한 세부 옵션사항**들에 대해서는 **아래의 문서**에서 확인 바랍니다.
+
+* [CovidStat Widget 자세히 살펴보기](/modules/covid)
 
 ### II-2. Artvee Widget
 
