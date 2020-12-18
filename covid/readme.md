@@ -8,7 +8,7 @@
 * III. API
 * IV. 삭제하기
 * V. 버전 히스토리
-* VI. 종속 모듈 R
+* VI. 종속 모듈
 
 ## I. CovidStat / CovidStatLive 소개
 
@@ -16,9 +16,35 @@
 
 ## III. API
 
-### i) 공통 옵션
+### i) CovidStat Class
 
-### ii) CovidStat 전용 옵션
+#### Constructor Options
+
+| 옵션 | 타입 | 기본값 | 설명 | 버전 |
+:-: | :-: | :-: | :---- | :-:
+refreshAfterSeconds | Int | 30 | Widget의 리프레시 시간을 결정 (초) | 1.1.0
+titleSize | Int | 17(iPhone) 또는 20(iPad) | 타이틀 글자의 사이즈를 결정 | 1.1.0
+countSize | Int | 17(iPhone) 또는 20(iPad) | 확진자수 글자의 사이즈를 결정 | 1.1.0
+dateSize | Int | 17(iPhone) 또는 20(iPad) | 날짜 글자의 사이즈를 결정 | 1.1.0
+weeklyChart | Boolean | false | Widget의 리프레시 시간을 결정 (초) | 1.1.0
+fillOpaque | Float | .7 | Widget의 리프레시 시간을 결정 (초) | 1.1.0
+
+
+```javascript
+
+```
+
+#### Methods
+
+| 메서드 | 파라메터 | 반환값 | 설명 | 버전 |
+:-: | :---- | :-: | :---- | :-:
+`async` present | | | CovidStat Widget을 출력 | 1.1.0
+
+```javascript
+
+```
+
+### ii) CovidStatLive Class
 
 ## IV. 삭제하기
 
