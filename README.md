@@ -145,7 +145,7 @@ await covidStatLive.present()
 Widget에 변경을 전달할 수 있는 일부 세부사항들은 **options를 전달**하여 표기할 수 있습니다.
 
 예를 들어, CovidStat Widget에서 다음의 세부사항의 변경을 하려면,
-* Widget 갱신 시간을 기존 30초에서 1분으로 증가
+* Widget 갱신 시간을 기존 1분으로 증가 (default 30초)
 * 주간 확진자 현황 그래프를 표기 (default 표기안함)
 
 ```javascript
