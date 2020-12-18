@@ -14,9 +14,19 @@
 
 ## II. 시작하기
 
+```javascript
+const { install } = importModule('/modules/moduler')
+const { CovidStat } = await install('covid')
+
+let covidStat = new CovidStat()
+await covidStat.present()
+```
+
 ## III. API
 
 ### i) CovidStat Class
+
+> CovidStat(전일 확진자 기준) Widget 클래스의 API를 살펴봅니다.
 
 #### Constructor Options
 
@@ -24,14 +34,32 @@
 :-: | :-: | :-: | :---- | :-:
 refreshAfterSeconds | Int | 30 | Widget의 리프레시 시간을 결정 (초) | 1.1.0
 titleSize | Int | 17(iPhone) 또는 20(iPad) | 타이틀 글자의 사이즈를 결정 | 1.1.0
-countSize | Int | 17(iPhone) 또는 20(iPad) | 확진자수 글자의 사이즈를 결정 | 1.1.0
-dateSize | Int | 17(iPhone) 또는 20(iPad) | 날짜 글자의 사이즈를 결정 | 1.1.0
+countSize | Int | ... | 확진자수 글자의 사이즈를 결정 | 1.1.0
+dateSize | Int | 11(iPhone) 또는 14(iPad) | 날짜 글자의 사이즈를 결정 | 1.1.0
 weeklyChart | Boolean | false | Widget의 리프레시 시간을 결정 (초) | 1.1.0
 fillOpaque | Float | .7 | Widget의 리프레시 시간을 결정 (초) | 1.1.0
 
+> 옵션의 사용은 아래의 코드를 참조 바랍니다.
 
 ```javascript
+let covidStat = new CovidStat({     
+    weeklyChart: true,
+    titleSize: 17,
+    countSize: 45,
+    dateSize: 11,
+    refreshAfterSecond: 60,
+    fillOpaque: .5,
+})
+```
 
+> iPhone/iPad별 사이즈를 설정하고 싶을 경우, 아래의 코드를 참조 바랍니다.
+
+```javascript
+let covidStat = new CovidStat({     
+    titleSize: Device.iPhone() ? 17 : 20,
+    countSize: Device.iPhone() ? 45 : 55,
+    dateSize: Device.iPhone() ? 11 : 14,
+})
 ```
 
 #### Methods
@@ -45,6 +73,8 @@ fillOpaque | Float | .7 | Widget의 리프레시 시간을 결정 (초) | 1.1.0
 ```
 
 ### ii) CovidStatLive Class
+
+> CovidStat(전일 확진자 기준) Widget 클래스의 API를 살펴봅니다.
 
 ## IV. 삭제하기
 
