@@ -2,7 +2,7 @@
 
 **Scriptable Modules 프로젝트**는 [iOS Scriptable App](https://scriptable.app)에서 동작시킬 App들을 **Module기반**으로 작성하여 손쉽게 재사용할 수 있도록 제공합니다.
 
-재사용 가능한 다양한 공통 코드들을 작성하고, 그 기반 위에서 다양한 Scriptable App들을 소개해 볼 예정입니다.
+재사용 가능한 다양한 **공통 컴포넌트**들을 작성하고, 그 기반 위에서 개발된 다양한 **Scriptable Apps**들을 소개해 볼 예정입니다.
 
 많은 관심 부탁드립니다~:)
 
@@ -34,7 +34,7 @@
 
 ### I-1. Moduler 설치
 
-Moduler는 Scriptable Modules 프로젝트에서 개발된 모듈들을 **자동설치** / **자동업데이트**를 지원하는 재사용 모듈입니다. Scriptable Modules 프로젝트에서 개발되는 App의 사용을 위해서는 반드시 설치가 필요하므로 아래의 가이드 라인을 참조하여 설치를 진행해주세요.
+**Moduler**는 Scriptable Modules 프로젝트에서 개발된 모듈들을 **자동설치** / **자동업데이트**를 지원하는 재사용 모듈입니다. **Scriptable Modules** 프로젝트에서 개발되는 **App의 사용을 위해서는 반드시 설치가 필요**하므로 아래의 가이드 라인을 참조하여 설치를 진행해주세요.
 
 > 아래의 코드를 Scriptable App에 복사하여 실행해 주세요.
 
@@ -54,7 +54,7 @@ let moduleFile = await request.loadString()
 fm.writeString(`${baseDirs[1]}/index.js`, moduleFile)
 ```
 
-> 파일 앱에서 `iCloud Drive > Scriptable` 위치로 이동해 보시면, modules 폴더가 생성되어 있고 moduler가 정상적으로 설치된 것을 확인 할 수 있습니다.
+> 파일 앱에서 `iCloud Drive > Scriptable` 위치로 이동해 보시면, **modules 폴더**가 생성되어 있고 그 하위에 **moduler가 정상적으로 설치**된 것을 확인 할 수 있습니다.
 
 
 ### I-2. Hello World (정상 설치 확인)
@@ -78,7 +78,7 @@ hello('julio')
 
 Scriptable Modules 프로젝트에서 개발된 모듈은 Moduler의 **install**을 통해 설치할 수 있습니다.
 
-예를 들어, Covid 모듈의 특정 클래스를 사용한다고 했을 때 아래와 같이 import를 수행할 수 있습니다.
+예를 들어, [CovidStat Widget](#ii-1-covidstat-widget)의 특정 클래스를 사용한다고 했을 때 아래와 같이 import를 수행할 수 있습니다.
 
 ```javascript
 const { install } = importModule('/modules/moduler')
@@ -88,7 +88,7 @@ const { CovidStat } = await install('covid')
 ...
 ```
 
-> **install** 수행시에 개선된 새로운 버전이 발견되면 자동 업데이트를 수행한 후 Import를 진행합니다.
+> **install** 수행시에 개선된 새로운 버전이 발견되면, 자동 업데이트를 수행한 후 Import를 진행합니다.
 
 ### I-4. 설치된 Modules 삭제
 
@@ -96,6 +96,9 @@ const { CovidStat } = await install('covid')
 
 ```javascript
 const { list, uninstall } = importModule('/modules/moduler')
+
+// 특정 모듈을 직접 Uninstall
+uninstall('covid')
 
 // 현재 설치된 모듈들을 불러와 하나씩 Uninstall을 진행
 list().map(ver => ver.name).forEach(ver => uninstall(ver))
@@ -105,9 +108,21 @@ list().map(ver => ver.name).forEach(ver => uninstall(ver))
 
 ## II. App Modules 소개
 
+
+
 ### II-1. CovidStat Widget
 
 <img width="461" alt="covid-stat-preview" src="https://user-images.githubusercontent.com/5626425/102501997-6ad2d580-40c1-11eb-9f1c-ee0680dcae70.png">
+
+#### i) 시작하기
+
+```javascript
+const { install } = importModule('/modules/moduler')
+const { CovidStat } = await install('covid')
+
+let covidStat = new CovidStat()
+await covidStat.present()
+```
 
 [Go to Detail](/modules/covid)
 
@@ -116,8 +131,12 @@ list().map(ver => ver.name).forEach(ver => uninstall(ver))
 bar | baz
 
 * overview
+  * overview
+  * preview
 * getting start
-* 
+* api
+* uninstall
+* version history
 
 ### II-2. Artvee Widget
 
