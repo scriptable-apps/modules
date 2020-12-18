@@ -14,3 +14,4 @@ bar | baz
 * api
 * uninstall
 * version history
+* dependencies
