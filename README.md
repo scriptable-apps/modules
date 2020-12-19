@@ -177,6 +177,8 @@ await covidStat.present()
 >
 > 12월 중, 공개 예정입니다~:)
 
+<img width="450" alt="artsen-preview" src="https://user-images.githubusercontent.com/5626425/102680886-184c0300-4200-11eb-8478-44b3a0e1177d.png">
+
 ## III. Component Modules 소개
 
 Scriptable App 에서 사용 할 수 있는 직접 제작한 **재사용 컴포넌트**들을 추가하고 있습니다. 아래의 재사용 컴포넌트를 활용하여 Scriptable App 개발시 생산성을 높여보세요.
