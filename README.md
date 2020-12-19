@@ -113,11 +113,13 @@ list().map(ver => ver.name).forEach(ver => uninstall(ver))
 
 ## II. App Modules 소개
 
-
-
 ### II-1. CovidStat Widget
 
+#### CovidStat Widget (코로나 확진자 현황 위젯)
+
 <img width="450" alt="covid-stat-preview" src="https://user-images.githubusercontent.com/5626425/102501997-6ad2d580-40c1-11eb-9f1c-ee0680dcae70.png">
+
+#### CovidStatLive Widget (코로나 확진자 실시간 현황 위젯)
 
 <img width="450" alt="covid-stat-live-preview" src="https://user-images.githubusercontent.com/5626425/102680654-8d6a0900-41fd-11eb-908b-6cdd9fdbe363.png">
 
