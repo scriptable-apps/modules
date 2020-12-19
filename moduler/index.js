@@ -1,3 +1,17 @@
+const toast = ({ title, body, sound, openURL }) => {
+    let noti = new Notification()
+    if (title) noti.title = title
+    else throw new Error('toast: title is required...')
+
+    if (body) noti.body = body
+    else throw new Error('toast: body is required...')
+
+    if (sound) noti.sound = sound
+    if (openURL) noti.openURL = openURL
+
+    noti.schedule()
+}
+
 const getModuleBaseInfos = () => {
     const fm = FileManager.iCloud()
     const dir = fm.documentsDirectory()
@@ -118,12 +132,12 @@ class Moduler {
         fm.writeString(`${baseDir}/version.json`, JSON.stringify(this.localVersions))
     
         if (!isNew) {
-            let noti = new Notification()
-            noti.title = `${remoteModule.name} (${remoteModule.version}) 모듈이 업데이트 되었습니다.`
-            noti.body = remoteModule.description
-            noti.sound = 'piano_success'
-            noti.openURL = 'https://scriptable-apps.github.io/modules'
-            noti.schedule()    
+            toast({
+                title: `${remoteModule.name} (${remoteModule.version}) 모듈이 업데이트 되었습니다.`,
+                body: remoteModule.description,
+                sound: 'piano_success',
+                openURL: 'https://scriptable-apps.github.io/modules',
+            })   
         }
     }
     
@@ -161,11 +175,11 @@ module.exports = {
         uninstall(moduleName)
     },
     hello: async () => {
-        let noti = new Notification()
-        noti.title = `Scriptable Moduler`
-        noti.body = 'Moduler 설치가 완료되었습니다!!'
-        noti.sound = 'complete'
-        noti.openURL = 'https://scriptable-apps.github.io/modules'
-        noti.schedule()
+        toast({
+            title: 'Scriptable Moduler',
+            body: 'Moduler 설치가 완료되었습니다!!',
+            sound: 'complete',
+            openURL: 'https://scriptable-apps.github.io/modules',
+        })
     }
 }
