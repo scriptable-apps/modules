@@ -104,9 +104,20 @@ const _loadLiveData = async (url) => {
 }
 
 class CovidStatLive extends CovidStatBase {
+    constructor (options) {
+        super(options)
+
+        this._options = Object.assign({
+            fakeCount: undefined,
+        }, options)
+    }
+
     async init () {
         const url = 'http://corona-live.com'
         let covid = await _loadLiveData(url)
+        if (this._options.fakeCount) {
+            covid.count = this._options.fakeCount
+        }
         await super.initBase('코로나LIVE', url, covid)
     }
 
