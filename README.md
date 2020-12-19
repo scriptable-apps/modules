@@ -256,6 +256,18 @@ console.log(moment().format('YYYY/MM/DD HH:mm:ss'))
 
 ### V-1. 여러대의 단말에 동시에 사용할 경우 iCloud 동기화 이슈
 
+> iPhone / iPad 등의 여러개으 단말에서 동시에 앱을 사용하는 경우 다음의 이슈가 발생할 수 있습니다.
+
+아래와 같이 특정 단말에서 `No file to import...` 오류가 발생할 경우, 다음의 사항을 확인 해주세요.
+
+<img width="450" alt="error-01" src="https://user-images.githubusercontent.com/5626425/102689283-405b5680-4240-11eb-9f85-8deebcabd654.jpg">
+
+1. 파일 앱의 iCloud Drive로 이동한 후 Scriptable > modules 폴더로 진입합니다.
+2. 에러가 발생한 앱의 폴더로 진입하며 아래와 같이 동기화가 완료되지 않은 상태의 파일이 보일 수 있습니다. (아래의 이미지 참조)
+3. 해당 파일을 한번 클릭해서 동기화 상태로 변경해 줍니다.
+4. Scriptable 앱으로 이동하여 다시 한번 수동실행하면 정상적으로 위젯이 반영됩니다.
+
+<img width="450" alt="error-01-cause" src="https://user-images.githubusercontent.com/5626425/102689282-3f2a2980-4240-11eb-9581-4cb4c5ab5f04.jpg">
 
 ## VI. Feedback
 
