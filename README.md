@@ -117,7 +117,7 @@ list().map(ver => ver.name).forEach(ver => uninstall(ver))
 
 > CovidStat Widget은 다음의 2가지 형태의 Widget을 제공합니다.
 
-##### CovidStat Widget (코로나 확진자 현황 위젯)
+#### CovidStat Widget (코로나 확진자 현황 위젯)
 
 * 전일 기준 코로나 확진자 현황을 보여줍니다
 * 확진자수를 4단계로 분리하여 색상별로 표현합니다
@@ -125,7 +125,7 @@ list().map(ver => ver.name).forEach(ver => uninstall(ver))
 
 <img width="450" alt="covid-stat-preview" src="https://user-images.githubusercontent.com/5626425/102501997-6ad2d580-40c1-11eb-9f1c-ee0680dcae70.png">
 
-##### CovidStatLive Widget (코로나 확진자 실시간 현황 위젯)
+#### CovidStatLive Widget (코로나 확진자 실시간 현황 위젯)
 
 * 실시간 코로나 확진자 현황을 보여줍니다
 * 확진자수를 4단계로 분리하여 색상별로 표현합니다
