@@ -115,6 +115,8 @@ list().map(ver => ver.name).forEach(ver => uninstall(ver))
 
 ### II-1. CovidStat Widget
 
+> CovidStat Widget은 다음의 2가지 형태의 Widget을 제공합니다.
+
 #### CovidStat Widget (코로나 확진자 현황 위젯)
 
 * 전일 기준 코로나 확진자 현황을 보여줍니다
