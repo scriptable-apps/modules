@@ -159,5 +159,13 @@ module.exports = {
         await moduler.init()
         await moduler.uninstall(moduleName)
         uninstall(moduleName)
+    },
+    hello: async () => {
+        let noti = new Notification()
+        noti.title = `Scriptable Moduler`
+        noti.body = 'Moduler 설치가 완료되었습니다!!'
+        noti.sound = 'complete'
+        noti.openURL = 'https://scriptable-apps.github.io/modules'
+        noti.schedule()
     }
 }
