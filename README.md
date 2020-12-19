@@ -52,6 +52,8 @@ baseDirs.forEach(dir => {
 let request = new Request('https://scriptable-apps.github.io/modules/moduler/index.js')
 let moduleFile = await request.loadString()
 fm.writeString(`${baseDirs[1]}/index.js`, moduleFile)
+
+await importModule('/modules/moduler').hello()
 ```
 
 > 파일 앱에서 `iCloud Drive > Scriptable` 위치로 이동해 보시면, **modules 폴더**가 생성되어 있고 그 하위에 **moduler가 정상적으로 설치**된 것을 확인 할 수 있습니다.
