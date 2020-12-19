@@ -93,7 +93,7 @@ const _loadLiveData = async (url) => {
             let date = document.querySelector('#__next > div:nth-child(1) > div:nth-child(4) > div:nth-child(1)').innerText
             let count = document.querySelector('#__next > div:nth-child(1) > div:nth-child(6) > div:nth-child(3) > div:nth-child(5) > strong').innerText.trim()
             
-            completion({date, count})        
+            completion({ date, count.replace(",", "") })
         }, 2000)
     `, true)
 
