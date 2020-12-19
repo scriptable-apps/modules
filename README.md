@@ -57,10 +57,10 @@ await importModule('/modules/moduler').hello()
 ```
 
 > 설치가 정상적으로 진행되었다면, 아래와 같이 Notification이 화면에 출력됩니다.
->
-> 모듈이 설치된 위치의 확인은, 파일 앱에서 `iCloud Drive > Scriptable` 위치로 이동해 보시면, **modules 폴더**가 생성되어 있고 그 하위에 **moduler가 정상적으로 설치**된 것을 확인 할 수 있습니다.
 
 <img width="450" alt="install-complete" src="https://user-images.githubusercontent.com/5626425/102679856-3d3b7880-41f6-11eb-85e3-5c768513b198.jpeg">
+
+> 모듈이 설치된 위치의 확인은, 파일 앱에서 `iCloud Drive > Scriptable` 위치로 이동해 보시면, **modules 폴더**가 생성되어 있고 그 하위에 **moduler가 정상적으로 설치**된 것을 확인 할 수 있습니다.
 
 ### I-2. Hello World (Moduler 정상동작 확인)
 
