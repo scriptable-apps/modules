@@ -8,8 +8,8 @@
         "dependencies": []
     }, {
         "name": "covid",
-        "version": "1.1.0",
-        "description": "✽ 클래스 구조를 효율적으로 개선하였습니다.\n✽ 코로나 주간 현황이 그래프로 표기됩니다.",
+        "version": "1.1.1",
+        "description": "✽ 자동 업데이트 테스트 입니다.",
         "dependencies": [
             "covidbase", "simplechart"
         ]
