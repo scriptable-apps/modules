@@ -117,7 +117,10 @@ list().map(ver => ver.name).forEach(ver => uninstall(ver))
 
 ### II-1. CovidStat Widget
 
-<img width="461" alt="covid-stat-preview" src="https://user-images.githubusercontent.com/5626425/102501997-6ad2d580-40c1-11eb-9f1c-ee0680dcae70.png">
+<img width="450" alt="covid-stat-preview" src="https://user-images.githubusercontent.com/5626425/102501997-6ad2d580-40c1-11eb-9f1c-ee0680dcae70.png">
+
+<img width="450" alt="covid-stat-live-preview" src="https://user-images.githubusercontent.com/5626425/102680654-8d6a0900-41fd-11eb-908b-6cdd9fdbe363.png">
+
 
 #### i) 시작하기
 
