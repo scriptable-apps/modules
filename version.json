@@ -8,7 +8,7 @@
         "dependencies": []
     }, {
         "name": "covid",
-        "version": "1.1.1",
+        "version": "1.1.2",
         "description": "✽ 자동 업데이트 테스트 입니다.",
         "dependencies": [
             "covidbase", "simplechart"
