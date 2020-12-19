@@ -28,7 +28,9 @@
 * [IV. 3rd Modules 소개](#iv-3rd-modules-소개)
   * [IV-1. Lodash](#iv-1-lodash)
   * [IV-2. Moment.js](#iv-2-momentjs)
-* [V. Feedback](#v-feedback)
+* [V. 이슈 발생시 가이드](#v-이슈-발생시-가이드)
+  * [V-1. 여러대의 단말에 동시에 사용할 경우 iCloud 동기화 이슈](#v-1-여러대의-단말에-동시에-사용할-경우-icloud-동기화-이슈)
+* [VI. Feedback](#vi-feedback)
   
 ## I. 시작하기
 
