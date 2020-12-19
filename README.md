@@ -252,8 +252,12 @@ console.log(moment().format('YYYY/MM/DD HH:mm:ss'))
 * [Documentation (https://momentjs.com/docs/)](https://momentjs.com/docs/)
 * [Guides (https://momentjs.com/guides/)](https://momentjs.com/guides/)
 
+## V. 이슈 발생시 가이드
 
-## V. Feedback
+### V-1. 여러대의 단말에 동시에 사용할 경우 iCloud 동기화 이슈
+
+
+## VI. Feedback
 
 > Scriptable Modules 프로젝트는 개발 피드백을 받고 있습니다~:)
 
