@@ -52,7 +52,7 @@ await covidStat.present()
 * **Script**: `CovidStat`
 * **When Interacting**: `Run Script`
 
-<img alt="add-widget-1" src="https://user-images.githubusercontent.com/5626425/102713304-b1ffd700-430a-11eb-96bb-9c297e1f5e7e.jpg">
+<img width="450" alt="add-widget-1" src="https://user-images.githubusercontent.com/5626425/102713304-b1ffd700-430a-11eb-96bb-9c297e1f5e7e.jpg">
 
 ### II-2. CovidStatLive
 
@@ -75,7 +75,7 @@ await covidStat.present()
 * **Script**: `CovidStatLive`
 * **When Interacting**: `Run Script`
 
-<img alt="add-widget-2" src="https://user-images.githubusercontent.com/5626425/102713303-af04e680-430a-11eb-8ebc-fbb16de1a27b.jpg">
+<img width="450" alt="add-widget-2" src="https://user-images.githubusercontent.com/5626425/102713303-af04e680-430a-11eb-8ebc-fbb16de1a27b.jpg">
 
 ## III. API
 
