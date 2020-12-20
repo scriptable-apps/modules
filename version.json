@@ -8,8 +8,8 @@
         "dependencies": []
     }, {
         "name": "covid",
-        "version": "1.2.2",
-        "description": "✽ 자동 업데이트 테스트 2",
+        "version": "1.2.3",
+        "description": "✽ 자동 업데이트 테스트 3",
         "dependencies": [
             "covidbase", "simplechart"
         ]
