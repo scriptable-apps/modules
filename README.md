@@ -57,8 +57,9 @@ fm.writeString(`${baseDirs[1]}/index.js`, moduleFile)
 
 await importModule('/modules/moduler').hello()
 ```
-
-> 설치가 정상적으로 진행되었다면, 아래와 같이 Notification이 화면에 출력됩니다.
+> Moduler 설치시에 **알림을 허용** 해주셔야 **자동 업데이트 알림**을 받을 수 있습니다.
+>
+> 설치가 정상적으로 진행되었다면, 아래와 같이 **Notification이 화면에 출력**됩니다.
 
 <img width="450" alt="install-complete" src="https://user-images.githubusercontent.com/5626425/102679856-3d3b7880-41f6-11eb-85e3-5c768513b198.jpeg">
 
