@@ -8,8 +8,8 @@
         "dependencies": []
     }, {
         "name": "covid",
-        "version": "1.2.1",
-        "description": "✽ 코로나 라이브의 숫자 포맷 이슈 처리 버그 수정",
+        "version": "1.2.2",
+        "description": "✽ 자동 업데이트 테스트 2",
         "dependencies": [
             "covidbase", "simplechart"
         ]
