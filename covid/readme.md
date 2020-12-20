@@ -31,7 +31,9 @@
 
 ## II. 시작하기
 
-### CovidStat 설치 및 실행하기
+### II-1. CovidStat
+
+#### i) 설치 및 실행하기
 
 ```javascript
 const { install } = importModule('/modules/moduler')
@@ -45,7 +47,16 @@ await covidStat.present()
 
 <img width="450" alt="covid-stat" src="https://user-images.githubusercontent.com/5626425/102713086-e5416680-4308-11eb-982a-3a4c15b2ac43.jpg">
 
-### CovidStatLive 설치 및 실행하기
+#### ii) Widget 추가
+
+* **Script**: `CovidStat`
+* **When Interacting**: `Run Script`
+
+<img alt="add-widget-1" src="https://user-images.githubusercontent.com/5626425/102713304-b1ffd700-430a-11eb-96bb-9c297e1f5e7e.jpg">
+
+### II-2. CovidStatLive
+
+#### i) 설치 및 실행하기
 
 ```javascript
 const { install } = importModule('/modules/moduler')
@@ -59,13 +70,20 @@ await covidStat.present()
 
 <img width="450" alt="covid-stat-live" src="https://user-images.githubusercontent.com/5626425/102713085-e2467600-4308-11eb-9f95-88be50f25d29.jpg">
 
+#### ii) Widget 추가
+
+* **Script**: `CovidStatLive`
+* **When Interacting**: `Run Script`
+
+<img alt="add-widget-2" src="https://user-images.githubusercontent.com/5626425/102713303-af04e680-430a-11eb-8ebc-fbb16de1a27b.jpg">
+
 ## III. API
 
-### i) CovidStat Class
+### III-1. CovidStat Class
 
 > CovidStat(전일 확진자 기준) Widget 클래스의 API를 살펴봅니다.
 
-#### Constructor Options
+#### i) Constructor Options
 
 | 옵션 | 타입 | 기본값 | 설명 | 버전 |
 :-: | :-: | :-: | :---- | :-:
@@ -99,7 +117,7 @@ let covidStat = new CovidStat({
 })
 ```
 
-#### Methods
+#### ii) Methods
 
 | 메서드 | 파라메터 | 반환값 | 설명 | 버전 |
 :-: | :---- | :-: | :---- | :-:
@@ -114,11 +132,11 @@ let covidStat = new CovidStat({
 await covidStat.present()
 ```
 
-### ii) CovidStatLive Class
+### III-2. CovidStatLive Class
 
 > CovidStatLive(실시간 확진자 현황) Widget 클래스의 API를 살펴봅니다.
 
-#### Constructor Options
+#### i) Constructor Options
 
 | 옵션 | 타입 | 기본값 | 설명 | 버전 |
 :-: | :-: | :-: | :---- | :-:
@@ -148,7 +166,7 @@ let covidStatLive = new CovidStatLive({
 })
 ```
 
-#### Methods
+#### ii) Methods
 
 | 메서드 | 파라메터 | 반환값 | 설명 | 버전 |
 :-: | :---- | :-: | :---- | :-:
@@ -177,6 +195,7 @@ uninstall('covid')
 
 | 버전 | 변경내용 | 배포일자 |
 :-: | :---- | :-:
+1.2.5 | 모듈 자동업데이트 테스트 완료 | 2020/12/20 
 1.2.0 | 주간 확진자 현황 그래프 반영 | 2020/12/18 
 1.1.0 | 모듈 기반 구조로 변경 (Moduler) | 2020/12/15 
 1.0.0 | 초기 버전 배포 | 2020/11/23
