@@ -3,14 +3,31 @@
 
 ### 목차
 
-* I. CovidStat / CovidStatLive 소개
-* II. 시작하기
-* III. API
-* IV. 삭제하기
-* V. 버전 히스토리
-* VI. 종속 모듈
+* [I. CovidStat / CovidStatLive 소개](#i-covidstat--covidstatlive-소개)
+* [II. 시작하기](#ii-시작하기)
+* [III. API](#iii-api)
+* [IV. 삭제하기](#iv-삭제하기)
+* [V. 버전 히스토리](#v-버전-히스토리)
+* [VI. 종속 모듈](#vi-종속-모듈)
 
 ## I. CovidStat / CovidStatLive 소개
+
+> CovidStat Widget은 다음의 2가지 형태의 Widget을 제공합니다.
+
+### I-1. CovidStat Widget (코로나 확진자 현황 위젯)
+
+* 전일 기준 코로나 확진자 현황을 보여줍니다
+* 확진자수를 4단계로 분리하여 색상별로 표현합니다
+* 7일간의 확진자 현황을 배경 그래프로 표현합니다
+
+<img width="450" alt="covid-stat-preview" src="https://user-images.githubusercontent.com/5626425/102501997-6ad2d580-40c1-11eb-9f1c-ee0680dcae70.png">
+
+### I-2. CovidStatLive Widget (코로나 확진자 실시간 현황 위젯)
+
+* 실시간 코로나 확진자 현황을 보여줍니다
+* 확진자수를 4단계로 분리하여 색상별로 표현합니다
+
+<img width="450" alt="covid-stat-live-preview" src="https://user-images.githubusercontent.com/5626425/102680654-8d6a0900-41fd-11eb-908b-6cdd9fdbe363.png">
 
 ## II. 시작하기
 
