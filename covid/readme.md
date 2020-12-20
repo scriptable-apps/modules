@@ -14,6 +14,8 @@
 
 ## II. 시작하기
 
+### CovidStat 설치 및 실행하기
+
 ```javascript
 const { install } = importModule('/modules/moduler')
 const { CovidStat } = await install('covid')
@@ -21,6 +23,24 @@ const { CovidStat } = await install('covid')
 let covidStat = new CovidStat()
 await covidStat.present()
 ```
+
+> 아래와 같이 Scriptable에 파일을 생성하여 복사한 후 우측 하단의 실행버튼을 클릭합니다.
+
+<img width="450" alt="covid-stat" src="https://user-images.githubusercontent.com/5626425/102713086-e5416680-4308-11eb-982a-3a4c15b2ac43.jpg">
+
+### CovidStatLive 설치 및 실행하기
+
+```javascript
+const { install } = importModule('/modules/moduler')
+const { CovidStat } = await install('covid')
+
+let covidStat = new CovidStat()
+await covidStat.present()
+```
+
+> 아래와 같이 Scriptable에 파일을 생성하여 복사한 후 우측 하단의 실행버튼을 클릭합니다.
+
+<img width="450" alt="covid-stat-live" src="https://user-images.githubusercontent.com/5626425/102713085-e2467600-4308-11eb-9f95-88be50f25d29.jpg">
 
 ## III. API
 
