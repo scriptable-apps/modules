@@ -13,7 +13,7 @@ const toast = ({ title, body, sound, openURL }) => {
 }
 
 const getModuleBaseInfos = () => {
-    const fm = FileManager.iCloud()
+    const fm = FileManager.local()
     const dir = fm.documentsDirectory()
     return { fm, baseDir: `${dir}/modules` }
 }
