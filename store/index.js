@@ -47,6 +47,10 @@ class StoreBase {
         )
     }
 
+    has (id) {
+        return this.store[id] !== undefined
+    }
+
     get (id) {
         return this.store[id]
     }

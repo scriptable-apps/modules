@@ -39,8 +39,8 @@
         "dependencies": []
     }, {
         "name": "store",
-        "version": "1.0.0",
-        "description": "✽ Store Initial commit...",
+        "version": "1.1.0",
+        "description": "일부 기능이 개선되었습니다.\n✽ Store.has method added...",
         "dependencies": []
     }, {
         "name": "hello",
