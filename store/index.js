@@ -88,8 +88,25 @@ class TemporaryStore extends StoreBase {
     }
 }
 
+class GistStore extends StoreBase {
+    constructor ({ gistId, gistToken, storeName, options }) {
+        this.storeName = storeName
+
+        this.options = Object.assign({
+            pretty: false
+        }, options)
+
+        this.store = init(path, storeName, this.options)
+    }
+
+    init () {
+
+    }
+}
+
 module.exports = {
     DocumentStore,
     CacheStore,
     TemporaryStore,
+    GistStore,
 }
