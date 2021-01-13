@@ -25,14 +25,19 @@ const init = (path, storeName, options) => {
 
 class StoreBase {
     constructor (path, storeName, options) {
-        this.path = path
-        this.storeName = storeName
+        if (path) {
+            this.path = path
+            this.storeName = storeName
 
-        this.options = Object.assign({
-            pretty: false
-        }, options)
+            this.options = Object.assign({
+                pretty: false
+            }, options)
 
-        this.store = init(path, storeName, this.options)
+            this.store = init(path, storeName, this.options)            
+        } else {
+            // anti...
+            console.log('gist mode...')
+        }
     }
 
     save (id, data) {
@@ -90,6 +95,7 @@ class TemporaryStore extends StoreBase {
 
 class GistStore extends StoreBase {
     constructor ({ githubId, gistId, gistToken, storeName, options }) {
+        super()
         this.githubId = githubId
         this.gistId = gistId
         this.gistToken = gistToken
