@@ -102,6 +102,17 @@ class GistStore extends StoreBase {
     init () {
 
     }
+    
+/*
+    let request = new Request(`https://gist.github.com/julio-kim/${gistId}/raw/${fileName}`)
+    request.method = 'GET'
+    request.headers = {
+        'Authorization': `bearer ${token}`,
+        'Accept': 'application/vnd.github.v3+json',
+        'User-Agent': 'ComicsRepository'
+    }
+    return await request.loadJSON()
+*/
 }
 
 module.exports = {
