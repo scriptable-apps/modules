@@ -60,10 +60,17 @@ class StoreBase {
         return this.store[id]
     }
 
-    all (sortKey) {
+    all (sortKey, sortFunc) {
         let datas = Object.values(this.store)
-        return (sortKey) ? 
-            datas.sort((prev, next) => prev[sortKey] > next[sortKey]) : datas
+        if (sortKey) {
+            if (sortFunc) {
+                return datas.sort(sortFunc)
+            } else {
+                return datas.sort((prev, next) => 
+                                  prev[sortKey] > next[sortKey] ? 1 : 
+                                  prev[sortKey] < next[sortKey] ? -1 : 0)
+            }
+        } else return datas
     }
 
     delete (id) {
