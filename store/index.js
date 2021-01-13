@@ -89,30 +89,49 @@ class TemporaryStore extends StoreBase {
 }
 
 class GistStore extends StoreBase {
-    constructor ({ gistId, gistToken, storeName, options }) {
+    constructor ({ githubId, gistId, gistToken, storeName, options }) {
+        this.githubId = githubId
+        this.gistId = gistId
+        this.gistToken = gistToken
         this.storeName = storeName
 
         this.options = Object.assign({
             pretty: false
         }, options)
 
-        this.store = init(path, storeName, this.options)
+        this.store = null
     }
 
-    init () {
+    async load () {
+        let request = new Request(`https://gist.github.com/${this.githubId}/${this.gistId}/raw/${this.storeName}.json`)
+        request.method = 'GET'
+        request.headers = {
+            'Authorization': `bearer ${this.gistToken}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'GistStore'
+        }
 
+        this.store = await request.loadJSON()
     }
-    
-/*
-    let request = new Request(`https://gist.github.com/julio-kim/${gistId}/raw/${fileName}`)
-    request.method = 'GET'
-    request.headers = {
-        'Authorization': `bearer ${token}`,
-        'Accept': 'application/vnd.github.v3+json',
-        'User-Agent': 'ComicsRepository'
+   
+    async saveSync () {
+        let files = {}
+        files[`${this.storeName}.json`] = { 
+            content: (this.options.pretty) ?
+                JSON.stringify(this.store, null, 4) : JSON.stringify(this.store)
+        }
+        let request = new Request(`https://api.github.com/gists/${this.gistId}`)
+        request.method = 'PATCH'
+        request.headers = {
+            'Authorization': `bearer ${this.gistToken}`,
+            'Accept': 'application/vnd.github.v3+json',
+            'User-Agent': 'GistStore'
+        }
+        request.body = JSON.stringify({ files })
+        let response = await request.loadJSON()
+        console.log(response)
     }
-    return await request.loadJSON()
-*/
+
 }
 
 module.exports = {
